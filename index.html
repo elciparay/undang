@@ -975,17 +975,66 @@ function tampilkanUcapan(data) {
 
 loadUcapan();
 
-</script>
 <audio id="backsound" loop>
-  <source src="backsound.mp3" type="audio/mpeg">
+    <source src="backsound.mp3" type="audio/mpeg">
 </audio>
+
+<button id="musicBtn" onclick="toggleMusic()">🎵</button>
+
+<style>
+#musicBtn {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    width: 48px;
+    height: 48px;
+    border: none;
+    border-radius: 50%;
+    background: #b08d57;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    z-index: 9999;
+    box-shadow: 0 3px 10px rgba(0,0,0,.25);
+    
+    animation: putar 3s linear infinite;
+}
+
+@keyframes putar {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+</style>
 
 <script>
 const audio = document.getElementById("backsound");
+const musicBtn = document.getElementById("musicBtn");
 
-document.addEventListener("click", function() {
-  audio.play().catch(() => {});
-}, { once: true });
+function bukaUndangan() {
+    document.getElementById("cover").style.display = "none";
+
+    audio.play().then(() => {
+        musicBtn.innerHTML = "🔊";
+    }).catch(() => {
+        musicBtn.innerHTML = "🔇";
+    });
+}
+
+function toggleMusic() {
+    if (audio.paused) {
+        audio.play();
+        musicBtn.innerHTML = "🔊";
+        musicBtn.style.animationPlayState = "running";
+    } else {
+        audio.pause();
+        musicBtn.innerHTML = "🔇";
+        musicBtn.style.animationPlayState = "paused";
+    }
+}
 </script>
 </body>
 
