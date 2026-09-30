@@ -1,0 +1,982 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>Undangan Pernikahan</title>
+
+<style>
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+
+    margin: 0;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    background:
+        linear-gradient(
+            135deg,
+            #fffaf0,
+            #f8f1e4
+        );
+
+    color: #3f3528;
+}
+
+.container {
+
+    width: 92%;
+
+    max-width: 700px;
+
+    margin: auto;
+
+}
+
+section {
+
+    padding: 70px 0;
+
+}
+
+.hero {
+
+    min-height: 100vh;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    text-align: center;
+
+}
+
+.hero-content {
+
+    width: 100%;
+
+}
+
+.small {
+
+    font-size: 15px;
+
+    letter-spacing: 2px;
+
+}
+
+h1 {
+
+    font-size: 48px;
+
+    margin: 20px 0;
+
+    font-weight: normal;
+
+}
+
+.and {
+
+    font-size: 25px;
+
+    font-style: italic;
+
+}
+
+.names {
+
+    font-size: 38px;
+
+    margin: 10px 0;
+
+}
+
+.date {
+
+    font-size: 20px;
+
+    margin: 25px 0;
+
+}
+
+.divider {
+
+    width: 100px;
+
+    height: 1px;
+
+    background: #a58b62;
+
+    margin: 25px auto;
+
+}
+
+.card {
+
+    background: rgba(255,255,255,.75);
+
+    border-radius: 18px;
+
+    padding: 25px;
+
+    margin-bottom: 20px;
+
+    box-shadow:
+        0 5px 20px rgba(0,0,0,.06);
+
+}
+
+.center {
+
+    text-align: center;
+
+}
+
+.countdown {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4,1fr);
+
+    gap: 10px;
+
+}
+
+.count {
+
+    background: #fff;
+
+    padding: 15px 5px;
+
+    border-radius: 12px;
+
+}
+
+.count b {
+
+    display: block;
+
+    font-size: 28px;
+
+}
+
+.btn {
+
+    display: inline-block;
+
+    padding: 13px 24px;
+
+    border: none;
+
+    border-radius: 30px;
+
+    background: #806b4c;
+
+    color: white;
+
+    text-decoration: none;
+
+    cursor: pointer;
+
+    font-family: inherit;
+
+}
+
+input,
+select,
+textarea {
+
+    width: 100%;
+
+    padding: 13px;
+
+    margin-top: 7px;
+
+    margin-bottom: 15px;
+
+    border: 1px solid #d6c8b4;
+
+    border-radius: 10px;
+
+    font-family: inherit;
+
+    font-size: 16px;
+
+    background: white;
+
+}
+
+textarea {
+
+    min-height: 100px;
+
+    resize: vertical;
+
+}
+
+label {
+
+    display: block;
+
+    text-align: left;
+
+}
+
+.ucapan {
+
+    padding: 16px;
+
+    margin-bottom: 12px;
+
+    background: white;
+
+    border-radius: 12px;
+
+    text-align: left;
+
+}
+
+.ucapan strong {
+
+    display: block;
+
+    margin-bottom: 5px;
+
+}
+
+.ucapan small {
+
+    color: #777;
+
+}
+
+.loading {
+
+    text-align: center;
+
+    color: #777;
+
+}
+
+footer {
+
+    text-align: center;
+
+    padding: 40px 20px;
+
+}
+
+@media(max-width:500px) {
+
+    h1 {
+        font-size: 38px;
+    }
+
+    .names {
+        font-size: 30px;
+    }
+
+    .count b {
+        font-size: 22px;
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- ===================== -->
+<!-- PEMBUKA -->
+<!-- ===================== -->
+
+<section class="hero">
+
+<div class="container hero-content">
+
+<div class="small">
+THE WEDDING OF
+</div>
+
+<h1>
+Undangan Pernikahan
+</h1>
+
+<div class="names">
+Ahmad
+</div>
+
+<div class="and">
+&
+</div>
+
+<div class="names">
+Aisyah
+</div>
+
+<div class="divider"></div>
+
+<div class="date">
+12 Desember 2026
+</div>
+
+<a
+href="#acara"
+class="btn">
+
+Buka Undangan
+
+</a>
+
+</div>
+
+</section>
+
+
+<!-- ===================== -->
+<!-- AYAT -->
+<!-- ===================== -->
+
+<section>
+
+<div class="container">
+
+<div class="card center">
+
+<h2>
+بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ
+</h2>
+
+<p>
+
+"Dan di antara tanda-tanda kekuasaan-Nya
+ialah Dia menciptakan untukmu pasangan
+dari jenismu sendiri, supaya kamu
+cenderung dan merasa tenteram kepadanya."
+
+</p>
+
+<p>
+QS. Ar-Rum: 21
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ===================== -->
+<!-- COUNTDOWN -->
+<!-- ===================== -->
+
+<section id="acara">
+
+<div class="container">
+
+<div class="card center">
+
+<h2>
+Menuju Hari Bahagia
+</h2>
+
+<div class="countdown">
+
+<div class="count">
+<b id="hari">0</b>
+Hari
+</div>
+
+<div class="count">
+<b id="jam">0</b>
+Jam
+</div>
+
+<div class="count">
+<b id="menit">0</b>
+Menit
+</div>
+
+<div class="count">
+<b id="detik">0</b>
+Detik
+</div>
+
+</div>
+
+</div>
+
+
+<!-- ===================== -->
+<!-- AKAD -->
+<!-- ===================== -->
+
+<div class="card center">
+
+<h2>
+Akad Nikah
+</h2>
+
+<p>
+Sabtu, 12 Desember 2026
+</p>
+
+<p>
+08.00 WIB
+</p>
+
+<p>
+Masjid Al-Ikhlas
+</p>
+
+<a
+class="btn"
+href="https://maps.google.com"
+target="_blank">
+
+Lihat Lokasi
+
+</a>
+
+</div>
+
+
+<!-- ===================== -->
+<!-- RESEPSI -->
+<!-- ===================== -->
+
+<div class="card center">
+
+<h2>
+Resepsi
+</h2>
+
+<p>
+Sabtu, 12 Desember 2026
+</p>
+
+<p>
+11.00 – 14.00 WIB
+</p>
+
+<p>
+Gedung Serbaguna
+</p>
+
+<a
+class="btn"
+href="https://maps.google.com"
+target="_blank">
+
+Lihat Lokasi
+
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ===================== -->
+<!-- RSVP -->
+<!-- ===================== -->
+
+<section>
+
+<div class="container">
+
+<div class="card">
+
+<h2 class="center">
+Konfirmasi Kehadiran
+</h2>
+
+<form id="rsvpForm">
+
+<label>
+Nama
+
+<input
+type="text"
+id="nama"
+required
+placeholder="Nama Anda">
+
+</label>
+
+
+<label>
+Konfirmasi Kehadiran
+
+<select id="kehadiran" required>
+
+<option value="">
+Pilih
+
+</option>
+
+<option value="Hadir">
+InsyaAllah Hadir
+
+</option>
+
+<option value="Tidak Hadir">
+Tidak Dapat Hadir
+
+</option>
+
+</select>
+
+</label>
+
+
+<label>
+Jumlah Tamu
+
+<input
+type="number"
+id="jumlah"
+min="1"
+max="10"
+value="1"
+required>
+
+</label>
+
+
+<label>
+Ucapan & Doa
+
+<textarea
+id="ucapan"
+required
+placeholder="Tuliskan ucapan dan doa untuk kedua mempelai...">
+</textarea>
+
+</label>
+
+
+<button
+type="submit"
+class="btn">
+
+Kirim Ucapan
+
+</button>
+
+</form>
+
+<p
+id="status"
+class="center">
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ===================== -->
+<!-- UCAPAN -->
+<!-- ===================== -->
+
+<section>
+
+<div class="container">
+
+<div class="card">
+
+<h2 class="center">
+💌 Ucapan & Doa
+</h2>
+
+<div id="daftarUcapan">
+
+<p class="loading">
+Memuat ucapan...
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<footer>
+
+<p>
+Terima kasih atas doa dan kehadiran Anda.
+</p>
+
+<p>
+Ahmad & Aisyah
+</p>
+
+</footer>
+
+
+<!-- FORM TERSEMBUNYI -->
+
+<iframe
+name="hiddenFrame"
+style="display:none">
+</iframe>
+
+
+<script>
+
+
+/*
+=========================================
+MASUKKAN URL GOOGLE APPS SCRIPT DI SINI
+=========================================
+*/
+
+const API_URL =
+"https://script.google.com/macros/s/AKfycbyVT1RGyocpC3M9z6mG8nbabxEp0zM3ZUVLcWhe_PEDNBgmXEW9TS3-AMMGpS0rIDei/exec";
+
+
+/*
+=========================================
+COUNTDOWN
+=========================================
+*/
+
+const targetDate =
+new Date("December 12, 2026 08:00:00").getTime();
+
+
+function countdown() {
+
+    const now =
+        new Date().getTime();
+
+    const distance =
+        targetDate - now;
+
+
+    if (distance <= 0) {
+
+        document.getElementById("hari")
+            .textContent = 0;
+
+        document.getElementById("jam")
+            .textContent = 0;
+
+        document.getElementById("menit")
+            .textContent = 0;
+
+        document.getElementById("detik")
+            .textContent = 0;
+
+        return;
+
+    }
+
+
+    const days =
+        Math.floor(
+            distance /
+            (1000 * 60 * 60 * 24)
+        );
+
+
+    const hours =
+        Math.floor(
+            (distance %
+            (1000 * 60 * 60 * 24)) /
+            (1000 * 60 * 60)
+        );
+
+
+    const minutes =
+        Math.floor(
+            (distance %
+            (1000 * 60 * 60)) /
+            (1000 * 60)
+        );
+
+
+    const seconds =
+        Math.floor(
+            (distance %
+            (1000 * 60)) /
+            1000
+        );
+
+
+    document.getElementById("hari")
+        .textContent = days;
+
+    document.getElementById("jam")
+        .textContent = hours;
+
+    document.getElementById("menit")
+        .textContent = minutes;
+
+    document.getElementById("detik")
+        .textContent = seconds;
+
+}
+
+
+countdown();
+
+setInterval(countdown,1000);
+
+
+/*
+=========================================
+KIRIM RSVP
+=========================================
+*/
+
+const form =
+document.getElementById("rsvpForm");
+
+
+form.addEventListener(
+"submit",
+function(e) {
+
+    e.preventDefault();
+
+
+    const nama =
+        document.getElementById("nama")
+        .value.trim();
+
+
+    const kehadiran =
+        document.getElementById("kehadiran")
+        .value;
+
+
+    const jumlah =
+        document.getElementById("jumlah")
+        .value;
+
+
+    const ucapan =
+        document.getElementById("ucapan")
+        .value.trim();
+
+
+    if (!nama || !kehadiran || !ucapan) {
+
+        alert(
+            "Mohon lengkapi data terlebih dahulu."
+        );
+
+        return;
+
+    }
+
+
+    const data = {
+
+        nama: nama,
+
+        kehadiran: kehadiran,
+
+        jumlah: jumlah,
+
+        ucapan: ucapan
+
+    };
+
+
+    const formElement =
+        document.createElement("form");
+
+
+    formElement.method = "POST";
+
+    formElement.action = API_URL;
+
+    formElement.target = "hiddenFrame";
+
+    formElement.style.display = "none";
+
+
+    const input =
+        document.createElement("input");
+
+
+    input.type = "hidden";
+
+    input.name = "data";
+
+    input.value =
+        JSON.stringify(data);
+
+
+    formElement.appendChild(input);
+
+    document.body.appendChild(formElement);
+
+
+    formElement.submit();
+
+
+    document.getElementById("status")
+        .textContent =
+        "Terima kasih. Ucapan Anda sedang dikirim...";
+
+
+    form.reset();
+
+    document.getElementById("jumlah")
+        .value = 1;
+
+
+    setTimeout(
+        loadUcapan,
+        1500
+    );
+
+});
+
+
+/*
+=========================================
+MEMUAT UCAPAN
+=========================================
+*/
+
+function loadUcapan() {
+
+    const callback =
+        "tampilkanUcapan";
+
+
+    const script =
+        document.createElement("script");
+
+
+    script.src =
+        API_URL +
+        "?callback=" +
+        callback +
+        "&t=" +
+        Date.now();
+
+
+    document.body.appendChild(script);
+
+}
+
+
+function tampilkanUcapan(data) {
+
+    const container =
+        document.getElementById(
+            "daftarUcapan"
+        );
+
+
+    container.innerHTML = "";
+
+
+    if (!data || data.length === 0) {
+
+        container.innerHTML =
+            "<p class='loading'>Belum ada ucapan.</p>";
+
+        return;
+
+    }
+
+
+    data.reverse();
+
+
+    data.forEach(function(item) {
+
+        const div =
+            document.createElement("div");
+
+
+        div.className =
+            "ucapan";
+
+
+        const nama =
+            document.createElement("strong");
+
+
+        nama.textContent =
+            item.nama;
+
+
+        const hadir =
+            document.createElement("small");
+
+
+        hadir.textContent =
+            item.kehadiran +
+            " • " +
+            item.jumlah +
+            " tamu";
+
+
+        const text =
+            document.createElement("p");
+
+
+        text.textContent =
+            item.ucapan;
+
+
+        div.appendChild(nama);
+
+        div.appendChild(hadir);
+
+        div.appendChild(text);
+
+
+        container.appendChild(div);
+
+    });
+
+}
+
+
+loadUcapan();
+
+</script>
+
+</body>
+
+</html>
